@@ -1,4 +1,4 @@
-25/07/2020
+25/06/2020
 
 A basic todo app built in React. Uses React Hooks and Sass.
 This was a weekend project for School of Applied Technology's fullstack JavaScript bootcamp.
