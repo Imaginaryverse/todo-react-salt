@@ -1,4 +1,4 @@
-@import './form.css';
+@import './form.scss';
 
 $clr-gray-dark: #2d3142;
 $clr-gray-medium: #4a516d;
@@ -132,6 +132,112 @@ body {
 
     &:hover {
       background-color: $clr-green-light;
+    }
+  }
+}
+
+.list-container {
+  width: 100%;
+  max-width: 768px;
+  margin-top: 1.5vmax;
+  padding: 2.5vmax;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: $clr-gray-medium;
+  border-radius: 10px;
+}
+
+.list {
+  list-style: none;
+}
+
+.todo {
+  min-height: 100px;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  cursor: pointer;
+
+  border: 2px solid $clr-gray-dark;
+  border-radius: 10px;
+  background-color: $clr-gray-light;
+
+  &.open {
+    background-color: $clr-green-light;
+  }
+
+  &__info-container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* border: 1px solid red; */
+
+    &__date {
+      font-size: 0.8rem;
+    }
+
+    &__task {
+      margin: 0.25rem 0;
+      color: $clr-white-light;
+    }
+
+    &__description {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      white-space: normal;
+    }
+  }
+
+  &__btn-container {
+    width: 4.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .done-btn {
+      height: 2rem;
+      width: 2rem;
+
+      cursor: pointer;
+
+      color: $clr-gray-dark;
+
+      border: 2px solid $clr-gray-dark;
+      border-radius: 10px;
+
+      background-color: $clr-green-medium;
+    }
+
+    .remove-btn {
+      height: 2rem;
+      width: 2rem;
+
+      cursor: pointer;
+
+      color: $clr-gray-dark;
+
+      border: 2px solid $clr-gray-dark;
+      border-radius: 10px;
+
+      background-color: $clr-red-medium;
     }
   }
 }
