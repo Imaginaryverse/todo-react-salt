@@ -49,7 +49,6 @@ const App = () => {
 
   return (
     <div className='App'>
-      <h1>TewDew</h1>
       <Form onSubmit={todosToAdd => onSubmit(todosToAdd)} />
       <section className='list-container'>
         <h2>To do</h2>

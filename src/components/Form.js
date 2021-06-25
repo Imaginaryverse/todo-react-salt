@@ -52,7 +52,13 @@ const Form = ({ onSubmit }) => {
             onChange={handleTaskChange}
             required
           />
-          <span className='character-counter'>{task.length}/50</span>
+          <span
+            className={
+              task.length === 50 ? 'character-counter max' : 'character-counter'
+            }
+          >
+            {task.length}/50
+          </span>
         </div>
         <label htmlFor='task'>Description</label>
         <div className='input-wrapper'>
@@ -60,13 +66,13 @@ const Form = ({ onSubmit }) => {
             name='description'
             className='input-text'
             type='text'
-            maxLength='350'
+            maxLength='300'
             autoComplete='off'
             placeholder='Description'
             value={description}
             onChange={handleDescriptionChange}
           />
-          <span className='character-counter'>{description.length}/350</span>
+          <span className='character-counter'>{description.length}/300</span>
         </div>
       </div>
       <input className='add-btn' type='submit' value='Add' />

@@ -11,7 +11,7 @@ $clr-green-medium: #7faa74;
 $clr-green-light: #96b98d;
 
 :root {
-  font-family: monospace;
+  font-family: sans-serif;
   font-size: 16px;
 }
 
@@ -74,15 +74,16 @@ body {
       align-items: center;
 
       .input-text {
-        height: 2rem;
+        height: 2.5rem;
         width: 100%;
         padding-left: 0.5rem;
-        padding-right: 5rem;
+        padding-right: 5.5rem;
 
         outline: none;
         border: 2px solid $clr-gray-dark;
         border-radius: 10px;
 
+        font-size: 1rem;
         color: $clr-gray-dark;
 
         background-color: $clr-white-dark;
@@ -100,16 +101,23 @@ body {
         position: absolute;
         right: 0.75rem;
 
+        text-align: right;
+
         font-size: 0.7rem;
+        letter-spacing: 1px;
         color: $clr-gray-light;
 
         border-left: 1px solid $clr-gray-light;
+
+        &.max {
+          color: $clr-red-medium;
+        }
       }
     }
   }
 
   .add-btn {
-    height: 2rem;
+    height: 2.5rem;
     width: 6rem;
 
     cursor: pointer;
