@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Form from './components/Form';
-import TodoList from './components/TodoList';
-import DoneList from './components/DoneList';
+import List from './components/List';
 import {
   getTodosFromLocalStorage,
   removeTodoFromLocalStorage,
@@ -49,17 +48,24 @@ const App = () => {
 
   return (
     <div className='App'>
+      <h1>TewDew</h1>
       <Form onSubmit={todosToAdd => onSubmit(todosToAdd)} />
-      <TodoList
-        listItems={notDoneTodos}
-        onToggleDone={updatedTodo => onToggleDone(updatedTodo)}
-        onRemove={todoToRemove => onRemove(todoToRemove)}
-      />
-      <DoneList
-        listItems={doneTodos}
-        onToggleDone={updatedTodo => onToggleDone(updatedTodo)}
-        onRemove={todoToRemove => onRemove(todoToRemove)}
-      />
+      <section className='list-container'>
+        <h2>To do</h2>
+        <List
+          listItems={notDoneTodos}
+          classnames='todo'
+          onToggleDone={updatedTodo => onToggleDone(updatedTodo)}
+          onRemove={todoToRemove => onRemove(todoToRemove)}
+        />
+        <h2>Done</h2>
+        <List
+          listItems={doneTodos}
+          classnames='todo done'
+          onToggleDone={updatedTodo => onToggleDone(updatedTodo)}
+          onRemove={todoToRemove => onRemove(todoToRemove)}
+        />
+      </section>
     </div>
   );
 };
