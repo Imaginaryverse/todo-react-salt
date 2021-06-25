@@ -6,6 +6,7 @@ import {
   removeTodoFromLocalStorage,
   updateTodoInLocalStorage,
 } from './utils/localStorage';
+import './styles/main.css';
 
 const App = () => {
   const [todos, setTodos] = useState(getTodosFromLocalStorage());

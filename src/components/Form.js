@@ -38,26 +38,38 @@ const Form = ({ onSubmit }) => {
 
   return (
     <form className='form' onSubmit={handleSubmit}>
-      <label htmlFor='task'>Task</label>
-      <input
-        name='task'
-        className='form__input-text'
-        type='text'
-        placeholder='Task'
-        value={task}
-        onChange={handleTaskChange}
-        required
-      />
-      <label htmlFor='task'>Description</label>
-      <input
-        name='description'
-        className='form__input-text'
-        type='text'
-        placeholder='Description'
-        value={description}
-        onChange={handleDescriptionChange}
-      />
-      <input className='form__submit-btn' type='submit' value='Add' />
+      <div className='form__input-container'>
+        <label htmlFor='task'>Task</label>
+        <div className='input-wrapper'>
+          <input
+            name='task'
+            className='input-text'
+            type='text'
+            autoComplete='off'
+            maxLength='50'
+            placeholder='Task'
+            value={task}
+            onChange={handleTaskChange}
+            required
+          />
+          <span className='character-counter'>{task.length}/50</span>
+        </div>
+        <label htmlFor='task'>Description</label>
+        <div className='input-wrapper'>
+          <input
+            name='description'
+            className='input-text'
+            type='text'
+            maxLength='350'
+            autoComplete='off'
+            placeholder='Description'
+            value={description}
+            onChange={handleDescriptionChange}
+          />
+          <span className='character-counter'>{description.length}/350</span>
+        </div>
+      </div>
+      <input className='add-btn' type='submit' value='Add' />
     </form>
   );
 };

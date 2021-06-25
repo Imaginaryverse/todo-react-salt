@@ -1,0 +1,129 @@
+@import './form.css';
+
+$clr-gray-dark: #2d3142;
+$clr-gray-medium: #4a516d;
+$clr-gray-light: #636c92;
+$clr-white-dark: #e0e0e0;
+$clr-white-light: #f5f5f5;
+$clr-red-medium: #ee6c4d;
+$clr-red-light: #f1856a;
+$clr-green-medium: #7faa74;
+$clr-green-light: #96b98d;
+
+:root {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $clr-white-light;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  padding: 1.5vmax;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: $clr-gray-dark;
+}
+
+.form {
+  width: 100%;
+  max-width: 768px;
+  padding: 2.5vmax;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  background-color: $clr-gray-medium;
+
+  &__input-container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .input-wrapper {
+      margin: 0.25rem 0 0.75rem;
+      position: relative;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .input-text {
+        height: 2rem;
+        width: 100%;
+        padding-left: 0.5rem;
+        padding-right: 5rem;
+
+        outline: none;
+        border: 2px solid $clr-gray-dark;
+        border-radius: 10px;
+
+        color: $clr-gray-dark;
+
+        background-color: $clr-white-dark;
+
+        transition: all 0.15s ease;
+
+        &:focus {
+          border-color: $clr-green-light;
+          background-color: $clr-white-light;
+        }
+      }
+
+      .character-counter {
+        padding-left: 0.5rem;
+        position: absolute;
+        right: 0.75rem;
+
+        font-size: 0.7rem;
+        color: $clr-gray-light;
+
+        border-left: 1px solid $clr-gray-light;
+      }
+    }
+  }
+
+  .add-btn {
+    height: 2rem;
+    width: 6rem;
+
+    cursor: pointer;
+
+    color: $clr-gray-dark;
+
+    border: 2px solid $clr-gray-dark;
+    border-radius: 10px;
+    background-color: $clr-green-medium;
+
+    transition: all 0.15s ease;
+
+    &:hover {
+      background-color: $clr-green-light;
+    }
+  }
+}
