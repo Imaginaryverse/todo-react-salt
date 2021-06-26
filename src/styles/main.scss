@@ -13,7 +13,8 @@ $clr-red-medium: #ee6c4d;
 $clr-red-light: #f1856a;
 $clr-green-medium: #7faa74;
 $clr-green-light: #96b98d;
-$clr-gold: #ffa630;
+$clr-gold: #ffb85c;
+$clr-gold-light: #ffc170;
 
 :root {
   font-family: sans-serif;
@@ -33,14 +34,15 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .App {
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
   padding: 1.5vmin;
+  padding-bottom: 1rem;
 
   display: flex;
   flex-direction: column;
@@ -131,6 +133,7 @@ body {
 
     cursor: pointer;
 
+    font-weight: bolder;
     color: $clr-gray-dark;
 
     border: 2px solid $clr-gray-dark;
@@ -141,7 +144,6 @@ body {
 
     &:hover {
       background-color: $clr-green-light;
-      transform: scale(1.025);
     }
   }
 }
@@ -174,7 +176,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
 
-  /* cursor: pointer; */
+  cursor: pointer;
 
   border: 2px solid $clr-gray-dark;
   border-radius: 10px;
@@ -183,15 +185,13 @@ body {
   transition: all 0.2s ease;
 
   &:hover {
-    /* transform: scale(1.01); */
     background-color: $clr-gray-hover;
   }
 
   &.done {
-    color: $clr-gray-dark-opaque;
-    text-decoration: line-through 3px;
-
-    * {
+    p,
+    h3 {
+      text-decoration: line-through 2px;
       color: $clr-white-light-opaque;
     }
 
@@ -205,7 +205,7 @@ body {
 
   &__info-container {
     height: 100%;
-    width: calc(100% - 3.5rem);
+    width: calc(100% - 4rem);
 
     display: flex;
     flex-direction: column;
@@ -223,22 +223,25 @@ body {
 
     &__description {
       font-size: 0.9rem;
+      font-weight: 400;
       text-overflow: ellipsis;
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
       white-space: normal;
     }
   }
 
   &__btn-container {
-    width: 3.5rem;
+    height: 4.5rem;
+    width: 4rem;
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
 
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
@@ -265,11 +268,14 @@ body {
     }
 
     .remove-btn {
-      height: 1.5rem;
-      width: 1.5rem;
+      /* height: 1.5rem;
+      width: 1.5rem; */
+      height: 2rem;
+      width: 4rem;
 
       cursor: pointer;
 
+      font-weight: bolder;
       color: $clr-red-medium;
 
       border: 2px solid $clr-gray-medium;
@@ -283,6 +289,29 @@ body {
         color: $clr-gray-dark;
         border-color: $clr-gray-dark;
         background-color: $clr-red-light;
+      }
+    }
+
+    .edit-btn {
+      height: 2rem;
+      width: 4rem;
+
+      cursor: pointer;
+
+      font-weight: bolder;
+      color: $clr-gold;
+
+      border: 2px solid $clr-gray-medium;
+      border-radius: 10px;
+
+      background-color: transparent;
+
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: $clr-gray-dark;
+        border-color: $clr-gray-dark;
+        background-color: $clr-gold-light;
       }
     }
   }
