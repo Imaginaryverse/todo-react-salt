@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
-import {
-  addTodoToLocalStorage,
-  getTodosFromLocalStorage,
-} from '../utils/localStorage';
+import React, { useState, useContext } from 'react';
+import { TodosContext } from '../TodosContext';
 
-const Form = ({ onSubmit }) => {
+const Form = () => {
+  const { addTodo } = useContext(TodosContext);
   const [task, setTask] = useState('');
   const [description, setDescription] = useState('');
+
+  const clearInputFields = () => {
+    setTask('');
+    setDescription('');
+  };
 
   const handleTaskChange = e => {
     setTask(e.target.value);
@@ -16,23 +19,17 @@ const Form = ({ onSubmit }) => {
     setDescription(e.target.value);
   };
 
-  const clearInputFields = () => {
-    setTask('');
-    setDescription('');
-  };
-
   const handleSubmit = e => {
     e.preventDefault();
     const todo = {
-      id: new Date().getTime().toString(),
+      id: new Date().getTime(),
       task,
       description,
       date: new Date().toLocaleString(),
       done: false,
     };
 
-    addTodoToLocalStorage(todo);
-    onSubmit(getTodosFromLocalStorage);
+    addTodo(todo);
     clearInputFields();
   };
 

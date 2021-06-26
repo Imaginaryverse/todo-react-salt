@@ -149,7 +149,7 @@ body {
   border-radius: 10px;
 }
 
-.list {
+.todo-list {
   list-style: none;
 }
 
@@ -169,9 +169,13 @@ body {
   border-radius: 10px;
   background-color: $clr-gray-light;
 
-  &.open {
-    background-color: $clr-green-light;
+  &.done {
+    opacity: 0.2;
   }
+
+  /* &.open {
+    background-color: $clr-green-light;
+  } */
 
   &__info-container {
     height: 100%;

@@ -109,7 +109,7 @@ body {
   border-radius: 10px;
 }
 
-.list {
+.todo-list {
   list-style: none;
 }
 
@@ -125,9 +125,12 @@ body {
   border: 2px solid #2d3142;
   border-radius: 10px;
   background-color: #636c92;
+  /* &.open {
+    background-color: $clr-green-light;
+  } */
 }
-.todo.open {
-  background-color: #96b98d;
+.todo.done {
+  opacity: 0.2;
 }
 .todo__info-container {
   height: 100%;

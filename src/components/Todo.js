@@ -1,25 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Todo = ({ classnames, todo, onToggleDone, onRemove }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleOpen = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const toggleDone = todoId => {
-    onToggleDone(todoId);
-  };
-
-  const removeTodo = todoId => {
-    onRemove(todoId);
-  };
-
+const Todo = ({ todo, toggleDone, removeTodo }) => {
   return (
-    <li
-      className={isOpen ? classnames + ' open' : classnames}
-      onClick={toggleOpen}
-    >
+    <li className={todo.done ? 'todo done' : 'todo'}>
       <div className='todo__info-container'>
         <p className='todo__info-container__date'>{todo.date}</p>
         <h2 className='todo__info-container__task'>{todo.task}</h2>
