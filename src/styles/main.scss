@@ -1,14 +1,19 @@
 @import './form.scss';
 
 $clr-gray-dark: #2d3142;
+$clr-gray-dark-opaque: rgba(45, 49, 66, 0.5);
 $clr-gray-medium: #4a516d;
 $clr-gray-light: #636c92;
+$clr-gray-hover: #6d769c;
+$clr-gray-light-opaque: rgba(99, 108, 146, 0.5);
 $clr-white-dark: #e0e0e0;
 $clr-white-light: #f5f5f5;
+$clr-white-light-opaque: rgba(245, 245, 245, 0.5);
 $clr-red-medium: #ee6c4d;
 $clr-red-light: #f1856a;
 $clr-green-medium: #7faa74;
 $clr-green-light: #96b98d;
+$clr-gold: #ffa630;
 
 :root {
   font-family: sans-serif;
@@ -35,7 +40,7 @@ body {
 .App {
   height: 100vh;
   width: 100vw;
-  padding: 1.5vmax;
+  padding: 1.5vmin;
 
   display: flex;
   flex-direction: column;
@@ -48,7 +53,7 @@ body {
 .form {
   width: 100%;
   max-width: 768px;
-  padding: 2.5vmax;
+  padding: 3.5vmin;
 
   display: flex;
   flex-direction: column;
@@ -57,6 +62,10 @@ body {
 
   border-radius: 10px;
   background-color: $clr-gray-medium;
+
+  label {
+    font-size: 0.8rem;
+  }
 
   &__input-container {
     width: 100%;
@@ -128,19 +137,21 @@ body {
     border-radius: 10px;
     background-color: $clr-green-medium;
 
-    transition: all 0.15s ease;
+    transition: background-color 0.15s ease;
 
     &:hover {
       background-color: $clr-green-light;
+      transform: scale(1.025);
     }
   }
 }
 
 .list-container {
+  height: 100%;
   width: 100%;
   max-width: 768px;
-  margin-top: 1.5vmax;
-  padding: 2.5vmax;
+  margin-top: 1.5vmin;
+  padding: 1.5vmin 3.5vmin;
 
   display: flex;
   flex-direction: column;
@@ -155,22 +166,37 @@ body {
 
 .todo {
   min-height: 100px;
-  margin: 0.5rem 0;
-  padding: 0.5rem;
+  margin: 1.5vmin 0;
+  padding: 0.75rem;
   position: relative;
 
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 
-  cursor: pointer;
+  /* cursor: pointer; */
 
   border: 2px solid $clr-gray-dark;
   border-radius: 10px;
   background-color: $clr-gray-light;
 
+  transition: all 0.2s ease;
+
+  &:hover {
+    /* transform: scale(1.01); */
+    background-color: $clr-gray-hover;
+  }
+
   &.done {
-    opacity: 0.2;
+    color: $clr-gray-dark-opaque;
+    text-decoration: line-through 3px;
+
+    * {
+      color: $clr-white-light-opaque;
+    }
+
+    border-color: $clr-gray-dark-opaque;
+    background-color: $clr-gray-light-opaque;
   }
 
   /* &.open {
@@ -179,69 +205,85 @@ body {
 
   &__info-container {
     height: 100%;
-    width: 100%;
+    width: calc(100% - 3.5rem);
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    /* border: 1px solid red; */
-
     &__date {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
     }
 
     &__task {
       margin: 0.25rem 0;
+      font-weight: 400;
       color: $clr-white-light;
     }
 
     &__description {
+      font-size: 0.9rem;
       text-overflow: ellipsis;
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       white-space: normal;
     }
   }
 
   &__btn-container {
-    width: 4.5rem;
+    width: 3.5rem;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0.75rem;
+    right: 0.75rem;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     .done-btn {
-      height: 2rem;
-      width: 2rem;
+      height: 1.5rem;
+      width: 1.5rem;
 
       cursor: pointer;
 
-      color: $clr-gray-dark;
+      color: $clr-green-medium;
 
-      border: 2px solid $clr-gray-dark;
+      border: 2px solid $clr-gray-medium;
       border-radius: 10px;
 
-      background-color: $clr-green-medium;
+      background-color: transparent;
+
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: $clr-gray-dark;
+        border-color: $clr-gray-dark;
+        background-color: $clr-green-light;
+      }
     }
 
     .remove-btn {
-      height: 2rem;
-      width: 2rem;
+      height: 1.5rem;
+      width: 1.5rem;
 
       cursor: pointer;
 
-      color: $clr-gray-dark;
+      color: $clr-red-medium;
 
-      border: 2px solid $clr-gray-dark;
+      border: 2px solid $clr-gray-medium;
       border-radius: 10px;
 
-      background-color: $clr-red-medium;
+      background-color: transparent;
+
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: $clr-gray-dark;
+        border-color: $clr-gray-dark;
+        background-color: $clr-red-light;
+      }
     }
   }
 }

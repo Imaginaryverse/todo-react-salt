@@ -5,7 +5,7 @@ const Todo = ({ todo, toggleDone, removeTodo }) => {
     <li className={todo.done ? 'todo done' : 'todo'}>
       <div className='todo__info-container'>
         <p className='todo__info-container__date'>{todo.date}</p>
-        <h2 className='todo__info-container__task'>{todo.task}</h2>
+        <h3 className='todo__info-container__task'>{todo.task}</h3>
         <p className='todo__info-container__description'>{todo.description}</p>
       </div>
       <div className='todo__btn-container'>

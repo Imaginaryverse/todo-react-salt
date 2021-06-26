@@ -43,7 +43,7 @@ const Form = () => {
             className='input-text'
             type='text'
             autoComplete='off'
-            maxLength='50'
+            maxLength='40'
             placeholder='Task'
             value={task}
             onChange={handleTaskChange}
@@ -51,10 +51,10 @@ const Form = () => {
           />
           <span
             className={
-              task.length === 50 ? 'character-counter max' : 'character-counter'
+              task.length === 40 ? 'character-counter max' : 'character-counter'
             }
           >
-            {task.length}/50
+            {task.length}/40
           </span>
         </div>
         <label htmlFor='task'>Description</label>
@@ -63,13 +63,21 @@ const Form = () => {
             name='description'
             className='input-text'
             type='text'
-            maxLength='300'
+            maxLength='150'
             autoComplete='off'
             placeholder='Description'
             value={description}
             onChange={handleDescriptionChange}
           />
-          <span className='character-counter'>{description.length}/300</span>
+          <span
+            className={
+              description.length === 150
+                ? 'character-counter max'
+                : 'character-counter'
+            }
+          >
+            {description.length}/150
+          </span>
         </div>
       </div>
       <input className='add-btn' type='submit' value='Add' />

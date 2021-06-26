@@ -10,7 +10,8 @@ export const TodosContext = createContext();
 export const TodosProvider = props => {
   const [todos, setTodos] = useState(sortTodos(getTodosFromLocalStorage()));
 
-  const addTodo = todo => setTodos(prevTodos => [...prevTodos, todo]);
+  const addTodo = todo =>
+    setTodos(prevTodos => sortTodos([...prevTodos, todo]));
 
   const toggleDone = todoId => {
     const todosUpdated = todos.map(el => {
