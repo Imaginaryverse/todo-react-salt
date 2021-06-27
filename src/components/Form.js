@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { TodosContext } from '../TodosContext';
 
 const Form = () => {
-  const { addTodo } = useContext(TodosContext);
+  const { addTodo, clearTodos } = useContext(TodosContext);
   const [task, setTask] = useState('');
   const [description, setDescription] = useState('');
 
@@ -80,7 +80,12 @@ const Form = () => {
           </span>
         </div>
       </div>
-      <input className='add-btn' type='submit' value='Add' />
+      <div className='btn-container'>
+        <button className='clear-btn' type='button' onClick={clearTodos}>
+          Clear All
+        </button>
+        <input className='add-btn' type='submit' value='Add' />
+      </div>
     </form>
   );
 };

@@ -13,15 +13,32 @@ export const TodosProvider = props => {
   const addTodo = todo =>
     setTodos(prevTodos => sortTodos([...prevTodos, todo]));
 
+  const clearTodos = () => {
+    setTodos([]);
+  };
+
   const toggleDone = todoId => {
     const todosUpdated = todos.map(el => {
       if (el.id === todoId) {
         el.done = !el.done;
         return el;
       }
-
       return el;
     });
+
+    setTodos(sortTodos(todosUpdated));
+  };
+
+  const editTodo = editedTodo => {
+    const todosUpdated = todos.map(el => {
+      if (el.id === editedTodo.id) {
+        el.task = editedTodo.task;
+        el.description = editedTodo.description;
+        return el;
+      }
+      return el;
+    });
+
     setTodos(sortTodos(todosUpdated));
   };
 
@@ -32,7 +49,9 @@ export const TodosProvider = props => {
   }, [todos]);
 
   return (
-    <TodosContext.Provider value={{ todos, addTodo, toggleDone, removeTodo }}>
+    <TodosContext.Provider
+      value={{ todos, addTodo, clearTodos, toggleDone, editTodo, removeTodo }}
+    >
       {props.children}
     </TodosContext.Provider>
   );
