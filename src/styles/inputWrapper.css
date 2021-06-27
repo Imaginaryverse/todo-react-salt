@@ -1,0 +1,37 @@
+/* COLORS */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.input-wrapper .input-text {
+  height: 2rem;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 5.5rem;
+  outline: none;
+  border: 2px solid #2e3138;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #2e3138;
+  background-color: #e7eeea;
+  transition: all 0.15s ease;
+}
+.input-wrapper .input-text:focus {
+  border-color: #1ccad8;
+  background-color: white;
+}
+.input-wrapper .character-counter {
+  padding-left: 0.5rem;
+  position: absolute;
+  right: 0.75rem;
+  text-align: right;
+  font-size: 0.6rem;
+  color: #535965;
+  border-left: 1px solid #535965;
+}
+.input-wrapper .character-counter.max {
+  color: #ff715b;
+}/*# sourceMappingURL=inputWrapper.css.map */

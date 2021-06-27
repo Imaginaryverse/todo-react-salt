@@ -35,6 +35,7 @@ const Form = () => {
 
   return (
     <form className='form' onSubmit={handleSubmit}>
+      <h1>Add Todo</h1>
       <div className='form__input-container'>
         <label htmlFor='task'>Task</label>
         <div className='input-wrapper'>
@@ -80,11 +81,11 @@ const Form = () => {
           </span>
         </div>
       </div>
-      <div className='btn-container'>
-        <button className='clear-btn' type='button' onClick={clearTodos}>
+      <div className='form__btn-container'>
+        <button className='btn clear-btn' type='button' onClick={clearTodos}>
           Clear All
         </button>
-        <input className='add-btn' type='submit' value='Add' />
+        <input className='btn add-btn' type='submit' value='Add' />
       </div>
     </form>
   );

@@ -29,53 +29,55 @@ const EditForm = ({ todo, toggleEdit, editTodo }) => {
 
   return (
     <form className='edit-form' onSubmit={handleSave}>
-      <div className='input-wrapper'>
-        <input
-          name='task'
-          className='input-text'
-          type='text'
-          autoComplete='off'
-          maxLength='40'
-          placeholder='Task'
-          value={editedTask}
-          onChange={handleTaskChange}
-          required
-        />
-        <span
-          className={
-            editedTask.length === 40
-              ? 'character-counter max'
-              : 'character-counter'
-          }
-        >
-          {editedTask.length}/40
-        </span>
+      <div className='edit-form__input-container'>
+        <div className='input-wrapper'>
+          <input
+            name='task'
+            className='input-text'
+            type='text'
+            autoComplete='off'
+            maxLength='40'
+            placeholder='Task'
+            value={editedTask}
+            onChange={handleTaskChange}
+            required
+          />
+          <span
+            className={
+              editedTask.length === 40
+                ? 'character-counter max'
+                : 'character-counter'
+            }
+          >
+            {editedTask.length}/40
+          </span>
+        </div>
+        <div className='input-wrapper'>
+          <input
+            name='task'
+            className='input-text'
+            type='text'
+            autoComplete='off'
+            maxLength='150'
+            placeholder='Task'
+            value={editedDesc}
+            onChange={handleDescChange}
+            required
+          />
+          <span
+            className={
+              editedDesc.length === 150
+                ? 'character-counter max'
+                : 'character-counter'
+            }
+          >
+            {editedDesc.length}/150
+          </span>
+        </div>
       </div>
-      <div className='input-wrapper'>
-        <input
-          name='task'
-          className='input-text'
-          type='text'
-          autoComplete='off'
-          maxLength='150'
-          placeholder='Task'
-          value={editedDesc}
-          onChange={handleDescChange}
-          required
-        />
-        <span
-          className={
-            editedDesc.length === 150
-              ? 'character-counter max'
-              : 'character-counter'
-          }
-        >
-          {editedDesc.length}/150
-        </span>
-      </div>
-      <div className='btn-container'>
-        <input type='submit' value='Save' />
-        <button type='button' onClick={toggleEdit}>
+      <div className='edit-form__btn-container'>
+        <input type='submit' className='btn save-btn' value='Save' />
+        <button type='button' className='btn cancel-btn' onClick={toggleEdit}>
           Cancel
         </button>
       </div>

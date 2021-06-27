@@ -1,0 +1,71 @@
+/* COLORS */
+$clr-gray-dark: #2e3138;
+$clr-gray-medium: #40454f;
+$clr-gray-light: #535965;
+$clr-gray-hover: #5c6370;
+$clr-red: #ff715b;
+$clr-red-english: #a7525d;
+$clr-blue: #1ccad8;
+$clr-green: #78c091;
+$clr-yellow: #fed766;
+$clr-white-dark: #e7eeea;
+
+.btn {
+  height: 2rem;
+  width: 4rem;
+
+  cursor: pointer;
+
+  color: white;
+  font-family: 'Lato', sans-serif;
+
+  outline: none;
+  border: 2px solid;
+  border-radius: 10px;
+
+  background-color: transparent;
+
+  transition: all 0.2s ease;
+
+  &.clear-btn,
+  &.remove-btn {
+    border-color: $clr-red;
+    color: $clr-white-dark;
+
+    &:hover {
+      background-color: $clr-red;
+      color: $clr-gray-dark;
+    }
+  }
+
+  &.add-btn,
+  &.save-btn {
+    border-color: $clr-green;
+    color: $clr-white-dark;
+
+    &:hover {
+      background-color: $clr-green;
+      color: $clr-gray-dark;
+    }
+  }
+
+  &.edit-btn {
+    border-color: $clr-blue;
+    color: $clr-white-dark;
+
+    &:hover {
+      background-color: $clr-blue;
+      color: $clr-gray-dark;
+    }
+  }
+
+  &.cancel-btn {
+    border-color: $clr-yellow;
+    color: $clr-white-dark;
+
+    &:hover {
+      background-color: $clr-yellow;
+      color: $clr-gray-dark;
+    }
+  }
+}

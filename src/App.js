@@ -2,16 +2,14 @@ import React from 'react';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
 import { TodosProvider } from './TodosContext';
-import './styles/main.css';
+import './styles/app.css';
 
 const App = () => {
   return (
     <TodosProvider>
       <div className='App'>
         <Form />
-        <div className='list-container'>
-          <TodoList />
-        </div>
+        <TodoList />
       </div>
     </TodosProvider>
   );

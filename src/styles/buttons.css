@@ -1,0 +1,45 @@
+/* COLORS */
+.btn {
+  height: 2rem;
+  width: 4rem;
+  cursor: pointer;
+  color: white;
+  font-family: "Lato", sans-serif;
+  outline: none;
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+.btn.clear-btn, .btn.remove-btn {
+  border-color: #ff715b;
+  color: #e7eeea;
+}
+.btn.clear-btn:hover, .btn.remove-btn:hover {
+  background-color: #ff715b;
+  color: #2e3138;
+}
+.btn.add-btn, .btn.save-btn {
+  border-color: #78c091;
+  color: #e7eeea;
+}
+.btn.add-btn:hover, .btn.save-btn:hover {
+  background-color: #78c091;
+  color: #2e3138;
+}
+.btn.edit-btn {
+  border-color: #1ccad8;
+  color: #e7eeea;
+}
+.btn.edit-btn:hover {
+  background-color: #1ccad8;
+  color: #2e3138;
+}
+.btn.cancel-btn {
+  border-color: #fed766;
+  color: #e7eeea;
+}
+.btn.cancel-btn:hover {
+  background-color: #fed766;
+  color: #2e3138;
+}/*# sourceMappingURL=buttons.css.map */

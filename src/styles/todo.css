@@ -1,0 +1,53 @@
+/* COLORS */
+.todo {
+  min-height: 125px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+.todo__info-container {
+  margin-right: 0.5rem;
+}
+.todo__date {
+  color: #2e3138;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.todo__task {
+  margin: 0.25rem 0;
+  font-size: 1.5rem;
+}
+.todo__description {
+  font-size: 0.9rem;
+}
+.todo__btn-container {
+  height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-active {
+  background-color: #535965;
+}
+.todo-active:hover {
+  background-color: #5c6370;
+}
+
+.todo-done {
+  background-color: #40454f;
+}
+.todo-done .todo__task,
+.todo-done .todo__description {
+  opacity: 0.8;
+  -webkit-text-decoration: line-through solid 2px;
+          text-decoration: line-through solid 2px;
+}/*# sourceMappingURL=todo.css.map */

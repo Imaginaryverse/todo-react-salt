@@ -10,23 +10,17 @@ $clr-green: #78c091;
 $clr-yellow: #fed766;
 $clr-white-dark: #e7eeea;
 
-.form {
+.edit-form {
+  height: 105px;
   width: 100%;
-  padding: 0.5rem 1.5rem;
-  margin-bottom: 0.5rem;
-
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
 
-  border: 2px solid rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  background-color: $clr-gray-light;
-
   &__input-container {
-    height: 105px;
+    height: 100%;
     width: 100%;
+    margin-right: 1rem;
 
     display: flex;
     flex-direction: column;
@@ -34,9 +28,10 @@ $clr-white-dark: #e7eeea;
   }
 
   &__btn-container {
-    width: 9rem;
+    height: 100%;
 
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 }

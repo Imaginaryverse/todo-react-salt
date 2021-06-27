@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@300;400&display=swap");
+/* COLORS */
+.form {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  background-color: #535965;
+}
+.form__input-container {
+  height: 105px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.form__btn-container {
+  width: 9rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* COLORS */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.input-wrapper .input-text {
+  height: 2rem;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 5.5rem;
+  outline: none;
+  border: 2px solid #2e3138;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #2e3138;
+  background-color: #e7eeea;
+  transition: all 0.15s ease;
+}
+.input-wrapper .input-text:focus {
+  border-color: #1ccad8;
+  background-color: white;
+}
+.input-wrapper .character-counter {
+  padding-left: 0.5rem;
+  position: absolute;
+  right: 0.75rem;
+  text-align: right;
+  font-size: 0.6rem;
+  color: #535965;
+  border-left: 1px solid #535965;
+}
+.input-wrapper .character-counter.max {
+  color: #ff715b;
+}
+
+/* COLORS */
+.btn {
+  height: 2rem;
+  width: 4rem;
+  cursor: pointer;
+  color: white;
+  font-family: "Lato", sans-serif;
+  outline: none;
+  border: 2px solid;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+.btn.clear-btn, .btn.remove-btn {
+  border-color: #ff715b;
+  color: #e7eeea;
+}
+.btn.clear-btn:hover, .btn.remove-btn:hover {
+  background-color: #ff715b;
+  color: #2e3138;
+}
+.btn.add-btn, .btn.save-btn {
+  border-color: #78c091;
+  color: #e7eeea;
+}
+.btn.add-btn:hover, .btn.save-btn:hover {
+  background-color: #78c091;
+  color: #2e3138;
+}
+.btn.edit-btn {
+  border-color: #1ccad8;
+  color: #e7eeea;
+}
+.btn.edit-btn:hover {
+  background-color: #1ccad8;
+  color: #2e3138;
+}
+.btn.cancel-btn {
+  border-color: #fed766;
+  color: #e7eeea;
+}
+.btn.cancel-btn:hover {
+  background-color: #fed766;
+  color: #2e3138;
+}
+
+/* COLORS */
+.todo-list {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  list-style: none;
+}
+
+/* COLORS */
+.todo {
+  min-height: 125px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  cursor: pointer;
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+.todo__info-container {
+  margin-right: 0.5rem;
+}
+.todo__date {
+  color: #2e3138;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.todo__task {
+  margin: 0.25rem 0;
+  font-size: 1.5rem;
+}
+.todo__description {
+  font-size: 0.9rem;
+}
+.todo__btn-container {
+  height: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-active {
+  background-color: #535965;
+}
+.todo-active:hover {
+  background-color: #5c6370;
+}
+
+.todo-done {
+  background-color: #40454f;
+}
+.todo-done .todo__task,
+.todo-done .todo__description {
+  opacity: 0.8;
+  -webkit-text-decoration: line-through solid 2px;
+          text-decoration: line-through solid 2px;
+}
+
+/* COLORS */
+.edit-form {
+  height: 105px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.edit-form__input-container {
+  height: 100%;
+  width: 100%;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.edit-form__btn-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* COLORS */
+:root {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: white;
+  font-family: "Lato", sans-serif;
+  text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+p {
+  color: white;
+  font-weight: 300;
+}
+
+label {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e3138;
+}
+
+.App {
+  height: 100vh;
+  max-height: 1216px;
+  width: 100vw;
+  max-width: 768px;
+  padding: 1.5vmin;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}/*# sourceMappingURL=app.css.map */
