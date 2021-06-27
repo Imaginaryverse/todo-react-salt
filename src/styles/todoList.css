@@ -1,4 +1,12 @@
 /* COLORS */
+.todo-counter {
+  width: 100%;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
 .todo-list {
   height: 100%;
   width: 100%;

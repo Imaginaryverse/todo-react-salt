@@ -10,6 +10,15 @@ $clr-green: #78c091;
 $clr-yellow: #fed766;
 $clr-white-dark: #e7eeea;
 
+.todo-counter {
+  width: 100%;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
 .todo-list {
   height: 100%;
   width: 100%;

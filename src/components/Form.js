@@ -35,7 +35,7 @@ const Form = () => {
 
   return (
     <form className='form' onSubmit={handleSubmit}>
-      <h1>Add Todo</h1>
+      <h2>Add Todo</h2>
       <div className='form__input-container'>
         <label htmlFor='task'>Task</label>
         <div className='input-wrapper'>

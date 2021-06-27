@@ -20,6 +20,7 @@
 }
 .form__btn-container {
   width: 9rem;
+  margin-bottom: 0.5rem;
   display: flex;
   justify-content: space-between;
 }/*# sourceMappingURL=form.css.map */
