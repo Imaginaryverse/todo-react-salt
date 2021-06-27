@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import EditForm from './EditForm';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 
 const Todo = ({ todo, toggleDone, editTodo, removeTodo }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -26,15 +28,15 @@ const Todo = ({ todo, toggleDone, editTodo, removeTodo }) => {
           <p className='todo__description'>{todo.description}</p>
         </div>
         <div className='todo__btn-container'>
+          <button className='btn edit-btn' onClickCapture={toggleEdit}>
+            <FontAwesomeIcon icon={faEdit} />
+          </button>
           <button
             type='button'
             className='btn remove-btn'
             onClick={() => removeTodo(todo.id)}
           >
-            Remove
-          </button>
-          <button className='btn edit-btn' onClickCapture={toggleEdit}>
-            Edit
+            <FontAwesomeIcon icon={faTrash} />
           </button>
         </div>
       </li>

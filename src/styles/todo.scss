@@ -15,6 +15,7 @@ $clr-white-dark: #e7eeea;
   width: 100%;
   margin-bottom: 0.5rem;
   padding: 0.5rem;
+  position: relative;
 
   display: flex;
   justify-content: center;
@@ -49,10 +50,12 @@ $clr-white-dark: #e7eeea;
   }
 
   &__btn-container {
-    height: 4.5rem;
+    width: 4.5rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
 
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
@@ -71,7 +74,7 @@ $clr-white-dark: #e7eeea;
 
   .todo__task,
   .todo__description {
-    opacity: 0.8;
+    opacity: 0.7;
     text-decoration: line-through solid 2px;
   }
 }

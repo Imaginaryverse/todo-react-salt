@@ -27,13 +27,13 @@ $clr-white-dark: #e7eeea;
 
   transition: all 0.2s ease;
 
-  &.clear-btn,
-  &.remove-btn {
+  &.clear-btn {
     border-color: $clr-red;
     color: $clr-white-dark;
 
     &:hover {
       background-color: $clr-red;
+      border-color: $clr-gray-dark;
       color: $clr-gray-dark;
     }
   }
@@ -45,16 +45,7 @@ $clr-white-dark: #e7eeea;
 
     &:hover {
       background-color: $clr-green;
-      color: $clr-gray-dark;
-    }
-  }
-
-  &.edit-btn {
-    border-color: $clr-blue;
-    color: $clr-white-dark;
-
-    &:hover {
-      background-color: $clr-blue;
+      border-color: $clr-gray-dark;
       color: $clr-gray-dark;
     }
   }
@@ -65,7 +56,37 @@ $clr-white-dark: #e7eeea;
 
     &:hover {
       background-color: $clr-yellow;
+      border-color: $clr-gray-dark;
       color: $clr-gray-dark;
     }
+  }
+}
+
+.remove-btn,
+.edit-btn {
+  height: 2rem;
+  width: 2rem;
+}
+
+.remove-btn {
+  margin-left: 0.5rem;
+  border-color: $clr-red;
+  color: $clr-white-dark;
+
+  &:hover {
+    background-color: $clr-red;
+    border-color: $clr-gray-dark;
+    color: $clr-gray-dark;
+  }
+}
+
+.edit-btn {
+  border-color: $clr-blue;
+  color: $clr-white-dark;
+
+  &:hover {
+    background-color: $clr-blue;
+    border-color: $clr-gray-dark;
+    color: $clr-gray-dark;
   }
 }

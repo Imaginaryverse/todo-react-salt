@@ -11,12 +11,13 @@
   background-color: transparent;
   transition: all 0.2s ease;
 }
-.btn.clear-btn, .btn.remove-btn {
+.btn.clear-btn {
   border-color: #ff715b;
   color: #e7eeea;
 }
-.btn.clear-btn:hover, .btn.remove-btn:hover {
+.btn.clear-btn:hover {
   background-color: #ff715b;
+  border-color: #2e3138;
   color: #2e3138;
 }
 .btn.add-btn, .btn.save-btn {
@@ -25,14 +26,7 @@
 }
 .btn.add-btn:hover, .btn.save-btn:hover {
   background-color: #78c091;
-  color: #2e3138;
-}
-.btn.edit-btn {
-  border-color: #1ccad8;
-  color: #e7eeea;
-}
-.btn.edit-btn:hover {
-  background-color: #1ccad8;
+  border-color: #2e3138;
   color: #2e3138;
 }
 .btn.cancel-btn {
@@ -41,5 +35,33 @@
 }
 .btn.cancel-btn:hover {
   background-color: #fed766;
+  border-color: #2e3138;
+  color: #2e3138;
+}
+
+.remove-btn,
+.edit-btn {
+  height: 2rem;
+  width: 2rem;
+}
+
+.remove-btn {
+  margin-left: 0.5rem;
+  border-color: #ff715b;
+  color: #e7eeea;
+}
+.remove-btn:hover {
+  background-color: #ff715b;
+  border-color: #2e3138;
+  color: #2e3138;
+}
+
+.edit-btn {
+  border-color: #1ccad8;
+  color: #e7eeea;
+}
+.edit-btn:hover {
+  background-color: #1ccad8;
+  border-color: #2e3138;
   color: #2e3138;
 }/*# sourceMappingURL=buttons.css.map */

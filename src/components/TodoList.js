@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { TodosContext } from '../TodosContext';
 import Todo from './Todo';
+import countRemainingTodos from '../utils/countRemainingTodos';
 
 const TodoList = () => {
   const { todos, toggleDone, editTodo, removeTodo } = useContext(TodosContext);
   const [remainingTodos, setRemainingTodos] = useState(
-    todos.filter(el => !el.done).length
+    countRemainingTodos(todos)
   );
 
   useEffect(() => {
-    setRemainingTodos(todos.filter(el => !el.done).length);
+    setRemainingTodos(countRemainingTodos(todos));
   }, [todos]);
 
   return (
