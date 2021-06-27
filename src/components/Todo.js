@@ -25,9 +25,9 @@ const Todo = ({
       onClick={() => toggleDone(todo.id)}
     >
       <div className='todo__info-container'>
-        <p className='todo__date'>{todo.date}</p>
         <h3 className='todo__task'>{todo.task}</h3>
         <p className='todo__description'>{todo.description}</p>
+        <p className='todo__date'>{todo.date}</p>
       </div>
       <div className='todo__btn-container'>
         <button className='btn edit-btn' onClickCapture={toggleEdit}>

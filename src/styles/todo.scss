@@ -14,7 +14,7 @@ $clr-white-dark: #e7eeea;
   min-height: 125px;
   width: 100%;
   margin-bottom: 0.5rem;
-  padding: 0.5rem;
+  padding: 2vmin;
   position: relative;
 
   display: flex;
@@ -29,31 +29,42 @@ $clr-white-dark: #e7eeea;
   transition: background-color 0.2s ease;
 
   &__info-container {
+    height: 100%;
     min-height: 105px;
     width: 100%;
-    margin-right: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__task {
+    margin-right: 5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+  }
+  
+  &__description {
+    font-size: 0.9rem;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
   }
 
   &__date {
+    width: 100%;
+    margin-top: 0.75rem;
+
+    text-align: right;
+
     color: $clr-gray-dark;
     font-size: 0.7rem;
     font-weight: 400;
   }
 
-  &__task {
-    margin: 0.25rem 0;
-    font-size: 1.5rem;
-  }
-
-  &__description {
-    font-size: 0.9rem;
-  }
-
   &__btn-container {
     width: 4.5rem;
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
+    top: 2vmin;
+    right: 2vmin;
 
     display: flex;
     justify-content: space-between;
