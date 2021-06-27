@@ -4,9 +4,11 @@ import Todo from './Todo';
 import countRemainingTodos from '../utils/countRemainingTodos';
 
 const TodoList = () => {
-  const { todos, toggleDone, editTodo, removeTodo } = useContext(TodosContext);
+  const {
+    todos, toggleDone, editTodo, removeTodo,
+  } = useContext(TodosContext);
   const [remainingTodos, setRemainingTodos] = useState(
-    countRemainingTodos(todos)
+    countRemainingTodos(todos),
   );
 
   useEffect(() => {

@@ -10,8 +10,7 @@ export const TodosContext = createContext();
 export const TodosProvider = props => {
   const [todos, setTodos] = useState(sortTodos(getTodosFromLocalStorage()));
 
-  const addTodo = todo =>
-    setTodos(prevTodos => sortTodos([...prevTodos, todo]));
+  const addTodo = todo => setTodos(prevTodos => sortTodos([...prevTodos, todo]));
 
   const clearTodos = () => {
     setTodos([]);
@@ -20,8 +19,9 @@ export const TodosProvider = props => {
   const toggleDone = todoId => {
     const todosUpdated = todos.map(el => {
       if (el.id === todoId) {
-        el.done = !el.done;
-        return el;
+        const toggledTodo = el;
+        toggledTodo.done = !toggledTodo.done;
+        return toggledTodo;
       }
       return el;
     });
@@ -32,9 +32,7 @@ export const TodosProvider = props => {
   const editTodo = editedTodo => {
     const todosUpdated = todos.map(el => {
       if (el.id === editedTodo.id) {
-        el.task = editedTodo.task;
-        el.description = editedTodo.description;
-        return el;
+        return editedTodo;
       }
       return el;
     });
@@ -50,7 +48,9 @@ export const TodosProvider = props => {
 
   return (
     <TodosContext.Provider
-      value={{ todos, addTodo, clearTodos, toggleDone, editTodo, removeTodo }}
+      value={{
+        todos, addTodo, clearTodos, toggleDone, editTodo, removeTodo,
+      }}
     >
       {props.children}
     </TodosContext.Provider>
