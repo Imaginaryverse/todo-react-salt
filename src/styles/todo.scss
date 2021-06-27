@@ -28,6 +28,8 @@ $clr-white-dark: #e7eeea;
   transition: background-color 0.2s ease;
 
   &__info-container {
+    min-height: 105px;
+    width: 100%;
     margin-right: 0.5rem;
   }
 
