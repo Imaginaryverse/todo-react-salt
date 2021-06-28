@@ -9,6 +9,6 @@ The goal was to write a simple todo app that allowed users to:
 2. Toggle "done"-states of todos
 3. Remove todos
 
-Additional features such as being able to edit the content of a todo and being able to clear the entire list of todos were not required but were added for practice and funsies.
+Additional features such as being able to edit the content of a todo, being able to clear the entire list of todos, as well as the todo counter were not part of the requirements but were added for practice and funsies.
 
 Enjoy!
