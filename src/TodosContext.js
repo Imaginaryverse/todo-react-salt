@@ -12,9 +12,7 @@ export const TodosProvider = props => {
 
   const addTodo = todo => setTodos(prevTodos => sortTodos([...prevTodos, todo]));
 
-  const clearTodos = () => {
-    setTodos([]);
-  };
+  const clearTodos = () => setTodos([]);
 
   const toggleDone = todoId => {
     const todosUpdated = todos.map(el => {
