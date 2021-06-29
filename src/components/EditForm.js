@@ -4,13 +4,8 @@ const EditForm = ({ todo, toggleEdit, editTodo }) => {
   const [editedTask, setEditedTask] = useState(todo.task);
   const [editedDesc, setEditedDesc] = useState(todo.description);
 
-  const handleTaskChange = e => {
-    setEditedTask(e.target.value);
-  };
-
-  const handleDescChange = e => {
-    setEditedDesc(e.target.value);
-  };
+  const handleTaskChange = e => setEditedTask(e.target.value);
+  const handleDescChange = e => setEditedDesc(e.target.value);
 
   const handleSave = e => {
     e.preventDefault();

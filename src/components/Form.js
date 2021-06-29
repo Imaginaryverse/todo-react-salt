@@ -11,13 +11,8 @@ const Form = () => {
     setDescription('');
   };
 
-  const handleTaskChange = e => {
-    setTask(e.target.value);
-  };
-
-  const handleDescriptionChange = e => {
-    setDescription(e.target.value);
-  };
+  const handleTaskChange = e => setTask(e.target.value);
+  const handleDescriptionChange = e => setDescription(e.target.value);
 
   const handleSubmit = e => {
     e.preventDefault();

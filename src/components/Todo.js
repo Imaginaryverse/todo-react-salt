@@ -3,14 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 import EditForm from './EditForm';
 
-const Todo = ({
-  todo, toggleDone, editTodo, removeTodo,
-}) => {
+const Todo = ({ todo, toggleDone, editTodo, removeTodo }) => {
   const [isEditing, setIsEditing] = useState(false);
 
-  const toggleEdit = () => {
-    setIsEditing(!isEditing);
-  };
+  const toggleEdit = () => setIsEditing(!isEditing);
 
   if (isEditing) {
     return (
