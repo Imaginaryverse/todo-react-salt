@@ -24,7 +24,7 @@ const EditForm = ({ todo, toggleEdit, editTodo }) => {
 
   return (
     <form className='edit-form' onSubmit={handleSave}>
-      <div className='edit-form__input-container'>
+      <section className='edit-form__input-container'>
         <div className='input-wrapper'>
           <input
             name='task'
@@ -57,7 +57,6 @@ const EditForm = ({ todo, toggleEdit, editTodo }) => {
             placeholder='Task'
             value={editedDesc}
             onChange={handleDescChange}
-            required
           />
           <span
             className={
@@ -69,13 +68,13 @@ const EditForm = ({ todo, toggleEdit, editTodo }) => {
             {editedDesc.length}/150
           </span>
         </div>
-      </div>
-      <div className='edit-form__btn-container'>
+      </section>
+      <section className='edit-form__btn-container'>
         <input type='submit' className='btn save-btn' value='Save' />
         <button type='button' className='btn cancel-btn' onClick={toggleEdit}>
           Cancel
         </button>
-      </div>
+      </section>
     </form>
   );
 };

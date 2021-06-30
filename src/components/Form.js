@@ -31,7 +31,7 @@ const Form = () => {
   return (
     <form className='form' onSubmit={handleSubmit}>
       <h2>Add Todo</h2>
-      <div className='form__input-container'>
+      <section className='form__input-container'>
         <label htmlFor='task'>Task</label>
         <div className='input-wrapper'>
           <input
@@ -75,13 +75,13 @@ const Form = () => {
             {description.length}/150
           </span>
         </div>
-      </div>
-      <div className='form__btn-container'>
+      </section>
+      <section className='form__btn-container'>
         <button className='btn clear-btn' type='button' onClick={clearTodos}>
           Clear All
         </button>
         <input className='btn add-btn' type='submit' value='Add' />
-      </div>
+      </section>
     </form>
   );
 };

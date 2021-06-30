@@ -6,10 +6,10 @@ import './styles/app.css';
 
 const App = () => (
   <TodosProvider>
-    <div className='App'>
+    <main className='App'>
       <Form />
       <TodoList />
-    </div>
+    </main>
   </TodosProvider>
 );
 

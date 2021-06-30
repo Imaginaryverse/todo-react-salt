@@ -3,7 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 import EditForm from './EditForm';
 
-const Todo = ({ todo, toggleDone, editTodo, removeTodo }) => {
+const Todo = ({
+  todo, toggleDone, editTodo, removeTodo,
+}) => {
   const [isEditing, setIsEditing] = useState(false);
 
   const toggleEdit = () => setIsEditing(!isEditing);
@@ -20,23 +22,23 @@ const Todo = ({ todo, toggleDone, editTodo, removeTodo }) => {
       className={todo.done ? 'todo todo-done' : 'todo todo-active'}
       onClick={() => toggleDone(todo.id)}
     >
-      <div className='todo__info-container'>
+      <section className='todo__info-container'>
         <h3 className='todo__task'>{todo.task}</h3>
         <p className='todo__description'>{todo.description}</p>
         <p className='todo__date'>{todo.date}</p>
-      </div>
-      <div className='todo__btn-container'>
+      </section>
+      <section className='todo__btn-container'>
         <button className='btn edit-btn' onClickCapture={toggleEdit}>
           <FontAwesomeIcon icon={faEdit} />
         </button>
         <button
           type='button'
           className='btn remove-btn'
-          onClick={() => removeTodo(todo.id)}
+          onClickCapture={() => removeTodo(todo.id)}
         >
           <FontAwesomeIcon icon={faTrash} />
         </button>
-      </div>
+      </section>
     </li>
   );
 };
